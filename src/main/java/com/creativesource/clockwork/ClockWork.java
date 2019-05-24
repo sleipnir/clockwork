@@ -1,5 +1,6 @@
 package com.creativesource.clockwork;
 
+import com.creativesource.clockwork.ntp.NTPClock;
 import com.creativesource.clockwork.ntp.impl.SimpleNTPClient;
 import org.apache.commons.net.ntp.TimeInfo;
 import org.apache.commons.net.ntp.TimeStamp;
@@ -8,11 +9,10 @@ import java.io.Serializable;
 import java.time.*;
 
 public final class ClockWork extends Clock implements Serializable {
-
     public static final ClockWork UTC = new ClockWork(ZoneOffset.UTC);
 
-    private final SimpleNTPClient client;
     private final ZoneId zone;
+    private final NTPClock client;
 
     private ClockWork(ZoneId zone) {
         this.zone = zone;

@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 public class ClockWorkTest {
 
     @Test
-     void testGetZone() {
+     public void testGetZone() {
     }
 
     @Test
-    void testWithZone() {
+    public void testWithZone() {
     }
 
     @Test
-    void testInstant() {
+    public void testInstant() {
     }
 }
